@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package sso;
+
+option go_package = "github.com/odlev/animal-delivery/contracts/gen/go/ssopb;ssopb";
+
+service Auth {
+    rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse);
+    rpc RegisterApp (RegisterAppRequest) returns (RegisterAppResponse);
+    rpc Login (LoginRequest) returns (LoginResponse);
+    rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
+}
+
+message RegisterUserRequest {
+    string email = 1;
+    string password = 2;
+}
+
+message RegisterUserResponse {
+    int64 user_id = 1;
+}
+
+message RegisterAppRequest {
+    string name = 1;
+    string description = 2;
+}
+
+message RegisterAppResponse {
+    int64 app_id = 1;
+}
+
+message LoginRequest {
+    string email = 1;
+    string password = 2;
+    int64 app_id = 3;
+}
+
+message LoginResponse {
+    string token = 1;
+}
+
+message IsAdminRequest {
+    int64 user_id = 1;
+}
+
+message IsAdminResponse {
+    bool is_admin = 1;
+}
