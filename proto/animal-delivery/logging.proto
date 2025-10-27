@@ -1,7 +1,7 @@
 syntax = "proto3";
 package logging;
 
-option go_package = "github.com/odlev/animal-delivery/contracts/gen/go/loggingpb;loggingpb";
+option go_package = "github.com/odlev/contracts/gen/go/loggingpb;loggingpb";
 
 message LogEvent {
     string level = 1;

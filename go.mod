@@ -1,4 +1,4 @@
-module github.com/odlev/animal-delivery/contracts
+module github.com/odlev/contracts
 
 go 1.25.0
 

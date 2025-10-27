@@ -4,7 +4,7 @@ package status
 import (
 	"fmt"
 
-	pb "github.com/odlev/animal-delivery/contracts/gen/go/animaldelivery"
+	pb "github.com/odlev/contracts/gen/go/animaldelivery"
 )
 
 type OrderStatus string

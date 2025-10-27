@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package sso;
 
-option go_package = "github.com/odlev/animal-delivery/contracts/gen/go/ssopb;ssopb";
+option go_package = "github.com/odlev/contracts/gen/go/ssopb;ssopb";
 
 service Auth {
     rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse);

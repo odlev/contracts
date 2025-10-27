@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package delivery;
 
-option go_package = "github.com/odlev/animal-delivery/contracts/gen/go/animaldelivery;animaldelivery";
+option go_package = "github.com/odlev/contracts/gen/go/animaldelivery;animaldelivery";
 
 message StartDeliveryRequest {
     string order_id = 2;
