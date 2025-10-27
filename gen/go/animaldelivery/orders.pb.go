@@ -455,7 +455,7 @@ const file_proto_animal_delivery_orders_proto_rawDesc = "" +
 	"\fOrderService\x12F\n" +
 	"\vCreateOrder\x12\x1a.orders.CreateOrderRequest\x1a\x1b.orders.CreateOrderResponse\x12=\n" +
 	"\bGetOrder\x12\x17.orders.GetOrderRequest\x1a\x18.orders.GetOrderResponse\x12F\n" +
-	"\vDeleteOrder\x12\x1a.orders.DeleteOrderRequest\x1a\x1b.orders.DeleteOrderResponseBQZOgithub.com/odlev/animal-delivery/contracts/gen/go/animaldelivery;animaldeliveryb\x06proto3"
+	"\vDeleteOrder\x12\x1a.orders.DeleteOrderRequest\x1a\x1b.orders.DeleteOrderResponseBAZ?github.com/odlev/contracts/gen/go/animaldelivery;animaldeliveryb\x06proto3"
 
 var (
 	file_proto_animal_delivery_orders_proto_rawDescOnce sync.Once

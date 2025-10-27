@@ -275,7 +275,8 @@ func (x *LoginRequest) GetAppId() int64 {
 
 type LoginResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Token         string                 `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
+	AccessToken   string                 `protobuf:"bytes,1,opt,name=access_token,json=accessToken,proto3" json:"access_token,omitempty"`
+	RefresToken   string                 `protobuf:"bytes,2,opt,name=refres_token,json=refresToken,proto3" json:"refres_token,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -310,9 +311,16 @@ func (*LoginResponse) Descriptor() ([]byte, []int) {
 	return file_proto_sso_sso_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *LoginResponse) GetToken() string {
+func (x *LoginResponse) GetAccessToken() string {
 	if x != nil {
-		return x.Token
+		return x.AccessToken
+	}
+	return ""
+}
+
+func (x *LoginResponse) GetRefresToken() string {
+	if x != nil {
+		return x.RefresToken
 	}
 	return ""
 }
@@ -423,9 +431,10 @@ const file_proto_sso_sso_proto_rawDesc = "" +
 	"\fLoginRequest\x12\x14\n" +
 	"\x05email\x18\x01 \x01(\tR\x05email\x12\x1a\n" +
 	"\bpassword\x18\x02 \x01(\tR\bpassword\x12\x15\n" +
-	"\x06app_id\x18\x03 \x01(\x03R\x05appId\"%\n" +
-	"\rLoginResponse\x12\x14\n" +
-	"\x05token\x18\x01 \x01(\tR\x05token\")\n" +
+	"\x06app_id\x18\x03 \x01(\x03R\x05appId\"U\n" +
+	"\rLoginResponse\x12!\n" +
+	"\faccess_token\x18\x01 \x01(\tR\vaccessToken\x12!\n" +
+	"\frefres_token\x18\x02 \x01(\tR\vrefresToken\")\n" +
 	"\x0eIsAdminRequest\x12\x17\n" +
 	"\auser_id\x18\x01 \x01(\x03R\x06userId\",\n" +
 	"\x0fIsAdminResponse\x12\x19\n" +
@@ -434,7 +443,7 @@ const file_proto_sso_sso_proto_rawDesc = "" +
 	"\fRegisterUser\x12\x18.sso.RegisterUserRequest\x1a\x19.sso.RegisterUserResponse\x12@\n" +
 	"\vRegisterApp\x12\x17.sso.RegisterAppRequest\x1a\x18.sso.RegisterAppResponse\x12.\n" +
 	"\x05Login\x12\x11.sso.LoginRequest\x1a\x12.sso.LoginResponse\x124\n" +
-	"\aIsAdmin\x12\x13.sso.IsAdminRequest\x1a\x14.sso.IsAdminResponseB?Z=github.com/odlev/animal-delivery/contracts/gen/go/ssopb;ssopbb\x06proto3"
+	"\aIsAdmin\x12\x13.sso.IsAdminRequest\x1a\x14.sso.IsAdminResponseB/Z-github.com/odlev/contracts/gen/go/ssopb;ssopbb\x06proto3"
 
 var (
 	file_proto_sso_sso_proto_rawDescOnce sync.Once

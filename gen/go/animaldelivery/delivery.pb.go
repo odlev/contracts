@@ -461,7 +461,7 @@ const file_proto_animal_delivery_delivery_proto_rawDesc = "" +
 	"\x0fDeliveryService\x12P\n" +
 	"\rStartDelivery\x12\x1e.delivery.StartDeliveryRequest\x1a\x1f.delivery.StartDeliveryResponse\x12\\\n" +
 	"\x11GetDeliveryStatus\x12\".delivery.GetDeliveryStatusRequest\x1a#.delivery.GetDeliveryStatusResponse\x12S\n" +
-	"\x0eCancelDelivery\x12\x1f.delivery.CancelDeliveryRequest\x1a .delivery.CancelDeliveryResponseBQZOgithub.com/odlev/animal-delivery/contracts/gen/go/animaldelivery;animaldeliveryb\x06proto3"
+	"\x0eCancelDelivery\x12\x1f.delivery.CancelDeliveryRequest\x1a .delivery.CancelDeliveryResponseBAZ?github.com/odlev/contracts/gen/go/animaldelivery;animaldeliveryb\x06proto3"
 
 var (
 	file_proto_animal_delivery_delivery_proto_rawDescOnce sync.Once
