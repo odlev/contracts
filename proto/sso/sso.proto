@@ -9,7 +9,7 @@ service Auth {
     rpc RegisterApp(RegisterAppRequest) returns (RegisterAppResponse);
     rpc Login(LoginRequest) returns (LoginResponse);
     rpc IsAdmin(IsAdminRequest) returns (IsAdminResponse);
-    rpc RefreshTokens(RefreshTokensRequest) returns (RefreshTokensRespons);
+    rpc RefreshTokens(RefreshTokensRequest) returns (RefreshTokensResponse);
 }
 
 message RegisterUserRequest {
@@ -54,7 +54,7 @@ message RefreshTokensRequest {
     int64 app_id = 2;
 }
 
-message RefreshTokensRespons {
+message RefreshTokensResponse {
     string access_token = 1;
     string refresh_token = 2;
 }
