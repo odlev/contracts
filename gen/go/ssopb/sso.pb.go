@@ -465,7 +465,7 @@ func (x *RefreshTokensRequest) GetAppId() int64 {
 	return 0
 }
 
-type RefreshTokensRespons struct {
+type RefreshTokensResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	AccessToken   string                 `protobuf:"bytes,1,opt,name=access_token,json=accessToken,proto3" json:"access_token,omitempty"`
 	RefreshToken  string                 `protobuf:"bytes,2,opt,name=refresh_token,json=refreshToken,proto3" json:"refresh_token,omitempty"`
@@ -473,20 +473,20 @@ type RefreshTokensRespons struct {
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *RefreshTokensRespons) Reset() {
-	*x = RefreshTokensRespons{}
+func (x *RefreshTokensResponse) Reset() {
+	*x = RefreshTokensResponse{}
 	mi := &file_proto_sso_sso_proto_msgTypes[9]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *RefreshTokensRespons) String() string {
+func (x *RefreshTokensResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*RefreshTokensRespons) ProtoMessage() {}
+func (*RefreshTokensResponse) ProtoMessage() {}
 
-func (x *RefreshTokensRespons) ProtoReflect() protoreflect.Message {
+func (x *RefreshTokensResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_proto_sso_sso_proto_msgTypes[9]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -498,19 +498,19 @@ func (x *RefreshTokensRespons) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use RefreshTokensRespons.ProtoReflect.Descriptor instead.
-func (*RefreshTokensRespons) Descriptor() ([]byte, []int) {
+// Deprecated: Use RefreshTokensResponse.ProtoReflect.Descriptor instead.
+func (*RefreshTokensResponse) Descriptor() ([]byte, []int) {
 	return file_proto_sso_sso_proto_rawDescGZIP(), []int{9}
 }
 
-func (x *RefreshTokensRespons) GetAccessToken() string {
+func (x *RefreshTokensResponse) GetAccessToken() string {
 	if x != nil {
 		return x.AccessToken
 	}
 	return ""
 }
 
-func (x *RefreshTokensRespons) GetRefreshToken() string {
+func (x *RefreshTokensResponse) GetRefreshToken() string {
 	if x != nil {
 		return x.RefreshToken
 	}
@@ -545,16 +545,16 @@ const file_proto_sso_sso_proto_rawDesc = "" +
 	"\bis_admin\x18\x01 \x01(\bR\aisAdmin\"F\n" +
 	"\x14RefreshTokensRequest\x12\x17\n" +
 	"\auser_id\x18\x01 \x01(\x03R\x06userId\x12\x15\n" +
-	"\x06app_id\x18\x02 \x01(\x03R\x05appId\"^\n" +
-	"\x14RefreshTokensRespons\x12!\n" +
+	"\x06app_id\x18\x02 \x01(\x03R\x05appId\"_\n" +
+	"\x15RefreshTokensResponse\x12!\n" +
 	"\faccess_token\x18\x01 \x01(\tR\vaccessToken\x12#\n" +
-	"\rrefresh_token\x18\x02 \x01(\tR\frefreshToken2\xba\x02\n" +
+	"\rrefresh_token\x18\x02 \x01(\tR\frefreshToken2\xbb\x02\n" +
 	"\x04Auth\x12C\n" +
 	"\fRegisterUser\x12\x18.sso.RegisterUserRequest\x1a\x19.sso.RegisterUserResponse\x12@\n" +
 	"\vRegisterApp\x12\x17.sso.RegisterAppRequest\x1a\x18.sso.RegisterAppResponse\x12.\n" +
 	"\x05Login\x12\x11.sso.LoginRequest\x1a\x12.sso.LoginResponse\x124\n" +
-	"\aIsAdmin\x12\x13.sso.IsAdminRequest\x1a\x14.sso.IsAdminResponse\x12E\n" +
-	"\rRefreshTokens\x12\x19.sso.RefreshTokensRequest\x1a\x19.sso.RefreshTokensResponsB/Z-github.com/odlev/contracts/gen/go/ssopb;ssopbb\x06proto3"
+	"\aIsAdmin\x12\x13.sso.IsAdminRequest\x1a\x14.sso.IsAdminResponse\x12F\n" +
+	"\rRefreshTokens\x12\x19.sso.RefreshTokensRequest\x1a\x1a.sso.RefreshTokensResponseB/Z-github.com/odlev/contracts/gen/go/ssopb;ssopbb\x06proto3"
 
 var (
 	file_proto_sso_sso_proto_rawDescOnce sync.Once
@@ -570,16 +570,16 @@ func file_proto_sso_sso_proto_rawDescGZIP() []byte {
 
 var file_proto_sso_sso_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_proto_sso_sso_proto_goTypes = []any{
-	(*RegisterUserRequest)(nil),  // 0: sso.RegisterUserRequest
-	(*RegisterUserResponse)(nil), // 1: sso.RegisterUserResponse
-	(*RegisterAppRequest)(nil),   // 2: sso.RegisterAppRequest
-	(*RegisterAppResponse)(nil),  // 3: sso.RegisterAppResponse
-	(*LoginRequest)(nil),         // 4: sso.LoginRequest
-	(*LoginResponse)(nil),        // 5: sso.LoginResponse
-	(*IsAdminRequest)(nil),       // 6: sso.IsAdminRequest
-	(*IsAdminResponse)(nil),      // 7: sso.IsAdminResponse
-	(*RefreshTokensRequest)(nil), // 8: sso.RefreshTokensRequest
-	(*RefreshTokensRespons)(nil), // 9: sso.RefreshTokensRespons
+	(*RegisterUserRequest)(nil),   // 0: sso.RegisterUserRequest
+	(*RegisterUserResponse)(nil),  // 1: sso.RegisterUserResponse
+	(*RegisterAppRequest)(nil),    // 2: sso.RegisterAppRequest
+	(*RegisterAppResponse)(nil),   // 3: sso.RegisterAppResponse
+	(*LoginRequest)(nil),          // 4: sso.LoginRequest
+	(*LoginResponse)(nil),         // 5: sso.LoginResponse
+	(*IsAdminRequest)(nil),        // 6: sso.IsAdminRequest
+	(*IsAdminResponse)(nil),       // 7: sso.IsAdminResponse
+	(*RefreshTokensRequest)(nil),  // 8: sso.RefreshTokensRequest
+	(*RefreshTokensResponse)(nil), // 9: sso.RefreshTokensResponse
 }
 var file_proto_sso_sso_proto_depIdxs = []int32{
 	0, // 0: sso.Auth.RegisterUser:input_type -> sso.RegisterUserRequest
@@ -591,7 +591,7 @@ var file_proto_sso_sso_proto_depIdxs = []int32{
 	3, // 6: sso.Auth.RegisterApp:output_type -> sso.RegisterAppResponse
 	5, // 7: sso.Auth.Login:output_type -> sso.LoginResponse
 	7, // 8: sso.Auth.IsAdmin:output_type -> sso.IsAdminResponse
-	9, // 9: sso.Auth.RefreshTokens:output_type -> sso.RefreshTokensRespons
+	9, // 9: sso.Auth.RefreshTokens:output_type -> sso.RefreshTokensResponse
 	5, // [5:10] is the sub-list for method output_type
 	0, // [0:5] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
